@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — KoreFlow</title>
+<meta name="description" content="KoreFlow's Terms of Use. The rules and conditions that govern your use of the KoreFlow renovation and moving freight estimator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --champagne:      #F5EACF;
+    --champagne-deep: #E3CEA4;
+    --champagne-light:#FCF8ED;
+    --gold-accent:    #BC9C63;
+    --gold-deep:      #8F703C;
+    --gold-bright:    #E8CF8F;
+    --on-champagne:   #2E2618;
+    --on-champagne-soft:#615138;
+    --line:           #E3D8BE;
+    --shadow:         rgba(64, 55, 36, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--on-champagne);
+    background: linear-gradient(135deg, var(--champagne-light) 0%, var(--champagne) 55%, var(--champagne-deep) 100%);
+    min-height: 100vh;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', 'Times New Roman', serif; }
+
+  /* Nav */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(252, 248, 237, 0.78);
+    border-bottom: 1px solid rgba(143, 112, 60, 0.12);
+  }
+
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--on-champagne);
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-accent) 55%, var(--gold-deep));
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--on-champagne-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-links a.active { color: var(--gold-deep); font-weight: 600; }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-accent) 55%, var(--gold-deep));
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  /* Hero */
+  .hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 28px 28px;
+  }
+
+  .hero-card {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-accent) 55%, var(--gold-deep));
+    border-radius: 28px;
+    padding: 56px 48px;
+    color: #fff;
+    box-shadow: 0 20px 60px rgba(143, 112, 60, 0.35);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-card::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+  }
+
+  .hero-card .eyebrow {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+
+  .hero-card h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .hero-card .lede {
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.94;
+    max-width: 640px;
+    position: relative;
+  }
+
+  .hero-card .updated {
+    margin-top: 22px;
+    font-size: 13px;
+    opacity: 0.78;
+    position: relative;
+  }
+
+  /* Body */
+  main { max-width: 900px; margin: 0 auto; padding: 0 28px 80px; }
+
+  .content-card {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 48px 48px;
+    box-shadow: 0 12px 36px var(--shadow);
+    margin-top: 28px;
+  }
+
+  .agreement-banner {
+    background: rgba(245, 234, 207, 0.6);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: var(--on-champagne-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .agreement-banner strong { color: var(--gold-deep); }
+
+  .toc {
+    background: rgba(245, 234, 207, 0.45);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin-bottom: 40px;
+  }
+
+  .toc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .toc ul {
+    list-style: none;
+    columns: 2;
+    column-gap: 28px;
+  }
+
+  .toc li { margin-bottom: 6px; break-inside: avoid; }
+
+  .toc a {
+    color: var(--on-champagne-soft);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--gold-deep); }
+
+  section.policy {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section.policy:last-of-type { border-bottom: none; }
+
+  section.policy h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+  }
+
+  section.policy p,
+  section.policy li {
+    color: var(--on-champagne);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  section.policy p + p { margin-top: 12px; }
+  section.policy ul { padding-left: 22px; margin-top: 6px; }
+  section.policy li { margin-bottom: 6px; }
+
+  section.policy strong { color: var(--gold-deep); font-weight: 600; }
+
+  .contact-band {
+    margin-top: 40px;
+    background: linear-gradient(135deg, rgba(232, 207, 143, 0.45), rgba(188, 156, 99, 0.3));
+    border: 1px solid rgba(143, 112, 60, 0.2);
+    border-radius: 18px;
+    padding: 28px 32px;
+    text-align: center;
+  }
+
+  .contact-band h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--on-champagne);
+    margin-bottom: 8px;
+  }
+
+  .contact-band p {
+    color: var(--on-champagne-soft);
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .contact-band a {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 6px 16px rgba(143, 112, 60, 0.3);
+    transition: transform 0.2s;
+  }
+
+  .contact-band a:hover { transform: translateY(-2px); }
+
+  /* Footer */
+  footer {
+    background: var(--on-champagne);
+    color: var(--champagne-light);
+    padding: 50px 28px 28px;
+  }
+
+  .footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .footer-brand .brand-name { color: var(--champagne-light); font-size: 22px; }
+
+  footer p { color: var(--champagne-deep); font-size: 14px; line-height: 1.6; }
+
+  footer h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: var(--champagne-light);
+  }
+
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 8px; }
+
+  footer a {
+    color: var(--champagne-deep);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--gold-bright); }
+
+  .footer-bottom {
+    max-width: 1120px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(227, 206, 164, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--champagne-deep);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .hero { padding: 40px 18px 20px; }
+    .hero-card { padding: 36px 24px; }
+    .hero-card h1 { font-size: 34px; }
+    .content-card { padding: 30px 22px; }
+    .toc ul { columns: 1; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">K</span>
+      <span class="brand-name">KoreFlow</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html" class="active">Terms</a>
+      <a href="index.html#cta" class="nav-cta">Get the App</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-card">
+    <span class="eyebrow">TERMS OF USE</span>
+    <h1 class="serif">Terms of Use</h1>
+    <p class="lede">The rules and conditions that govern your use of KoreFlow. By installing or using the app you agree to these terms.</p>
+    <p class="updated">Last updated · July 20, 2025</p>
+  </div>
+</header>
+
+<main>
+  <div class="content-card">
+
+    <div class="agreement-banner">
+      <span style="font-size:18px;">⚜</span>
+      <span><strong>Please read carefully.</strong> These terms form a legal agreement between you and KoreFlow Inc. They cover what KoreFlow does, what it does not do, and your responsibilities when using the app.</span>
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">On this page</div>
+      <ul>
+        <li><a href="#acceptance">Acceptance of terms</a></li>
+        <li><a href="#license">License to use KoreFlow</a></li>
+        <li><a href="#estimates">Estimates, not contracts</a></li>
+        <li><a href="#user-data">Your data and content</a></li>
+        <li><a href="#acceptable">Acceptable use</a></li>
+        <li><a href="#ip">Intellectual property</a></li>
+        <li><a href="#third-party">Third-party services</a></li>
+        <li><a href="#disclaimer">Disclaimer of warranties</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#changes">Changes to the terms</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <section class="policy" id="acceptance">
+      <h2>1. Acceptance of terms</h2>
+      <p>By downloading, installing, or using KoreFlow, you agree to be bound by these Terms of Use and our <a href="privacy.html" style="color:var(--gold-deep);">Privacy Policy</a>. If you do not agree, please do not install or use the app.</p>
+      <p>You confirm that you are at least 13 years of age. If you are using KoreFlow on behalf of an organization, you represent that you have authority to bind that organization to these terms.</p>
+    </section>
+
+    <section class="policy" id="license">
+      <h2>2. License to use KoreFlow</h2>
+      <p>Subject to your compliance with these terms, KoreFlow Inc. grants you a personal, non-exclusive, non-transferable, revocable license to use the app on devices you own or control.</p>
+      <p>The app is provided free of charge. KoreFlow Inc. reserves the right to introduce paid features in the future; if we do, the introduction of any such features will be communicated clearly and existing free functionality will not be removed without notice.</p>
+    </section>
+
+    <section class="policy" id="estimates">
+      <h2>3. Estimates, not contracts</h2>
+      <p>Every quote produced by KoreFlow is a <strong>planning estimate</strong> based on the information you enter. It is not a binding offer, a service contract, or a fixed-price agreement from any mover, contractor, or freight provider.</p>
+      <p>KoreFlow does not provide moving, renovation, legal, or financial advice. The app is a planning and budgeting aid only. For structural, electrical, or load-bearing work, consult a licensed professional. For a binding quote, request an on-site assessment from a qualified service provider.</p>
+      <p>The estimate does not include building-specific parking permits, elevator reservation fees, shuttle services for walk-up buildings, fuel surcharges after the quoted date, customs or import duties on freight, hazardous-materials handling, or any costs tied to items not disclosed in your notes or photos.</p>
+    </section>
+
+    <section class="policy" id="user-data">
+      <h2>4. Your data and content</h2>
+      <p>KoreFlow stores all estimates and reference photos <strong>locally on your device</strong>. We do not upload your data to our servers and we do not maintain a cloud copy. You retain full ownership of the content you create within KoreFlow.</p>
+      <p>Because your data is stored locally, you are responsible for keeping a copy of any estimate you wish to preserve. Uninstalling the app, clearing all saved quotes, or restoring your device will permanently remove all KoreFlow data with no recovery option.</p>
+      <p>Our complete data practices are described in our <a href="privacy.html" style="color:var(--gold-deep);">Privacy Policy</a>, which is incorporated into these terms by reference.</p>
+    </section>
+
+    <section class="policy" id="acceptable">
+      <h2>5. Acceptable use</h2>
+      <p>You agree to use KoreFlow only for lawful purposes and in accordance with these terms. Specifically, you agree not to:</p>
+      <ul>
+        <li>Reverse engineer, decompile, or attempt to extract the source code of the app, except as permitted by applicable law.</li>
+        <li>Modify, translate, or create derivative works based on KoreFlow.</li>
+        <li>Use the app to harass, defame, or harm any person, or to transmit unlawful content.</li>
+        <li>Attempt to gain unauthorized access to any portion of the app or its related systems.</li>
+        <li>Use KoreFlow in connection with the planning of any activity that violates local, state, national, or international law.</li>
+        <li>Use the app in any manner that could disable, overburden, or impair our infrastructure.</li>
+      </ul>
+    </section>
+
+    <section class="policy" id="ip">
+      <h2>6. Intellectual property</h2>
+      <p>The KoreFlow name, logo, champagne-themed design system, app interface, and underlying pricing model are the intellectual property of KoreFlow Inc. and are protected by applicable copyright, trademark, and trade-secret laws.</p>
+      <p>You may not copy, reproduce, distribute, or create derivative works of the KoreFlow brand or interface without our prior written consent. Screenshots taken for personal use or for the purpose of sharing an estimate summary are explicitly permitted.</p>
+    </section>
+
+    <section class="policy" id="third-party">
+      <h2>7. Third-party services</h2>
+      <p>KoreFlow integrates with a small number of system-provided services governed by their own terms:</p>
+      <ul>
+        <li><strong>Apple Mail (MFMailComposeViewController)</strong> — used when you tap "Contact Support." Your use of Mail is governed by Apple's terms.</li>
+        <li><strong>Safari (SFSafariViewController)</strong> — used when you tap "Visit Website" or "Help Center." Your use of Safari is governed by Apple's terms.</li>
+        <li><strong>iOS Photos framework</strong> — used to read and write reference photos and quote summaries.</li>
+        <li><strong>iOS Contacts framework</strong> — used only when you tap "Import from Contacts."</li>
+        <li><strong>Core Location</strong> — used only when you grant location permission and only while the app is in use.</li>
+      </ul>
+      <p>KoreFlow Inc. is not responsible for the practices of any third-party service. We encourage you to review the terms and privacy policies of those services.</p>
+    </section>
+
+    <section class="policy" id="disclaimer">
+      <h2>8. Disclaimer of warranties</h2>
+      <p>KoreFlow is provided on an <strong>"as is" and "as available"</strong> basis. To the maximum extent permitted by law, KoreFlow Inc. disclaims all warranties, express or implied, including but not limited to:</p>
+      <ul>
+        <li>Implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</li>
+        <li>Warranties that the app will be uninterrupted, error-free, or free of harmful components.</li>
+        <li>Warranties as to the accuracy, reliability, or completeness of any estimate produced by the app.</li>
+      </ul>
+      <p>Material prices, fuel costs, and labor rates change. An estimate generated today may not match the price of an identical service performed weeks or months later.</p>
+    </section>
+
+    <section class="policy" id="liability">
+      <h2>9. Limitation of liability</h2>
+      <p>To the maximum extent permitted by applicable law, KoreFlow Inc. and its officers, directors, employees, and agents shall <strong>not be liable</strong> for any indirect, incidental, special, consequential, or punitive damages, including without limitation loss of profits, data, goodwill, or other intangible losses, arising out of or in connection with your use of (or inability to use) KoreFlow.</p>
+      <p>In no event shall KoreFlow Inc.'s total aggregate liability for any claim arising under these terms exceed <strong>the amount you paid KoreFlow Inc. for use of the app during the twelve (12) months preceding the claim</strong>. Because KoreFlow is currently provided free of charge, this amount is $0.</p>
+      <p>Nothing in these terms is intended to exclude or limit liability that cannot be excluded or limited under applicable law.</p>
+    </section>
+
+    <section class="policy" id="changes">
+      <h2>10. Changes to the terms</h2>
+      <p>KoreFlow Inc. may update these Terms of Use from time to time. When we do, we will revise the "Last updated" date at the top of this page. Material changes will be highlighted in the app's release notes for the version in which they take effect.</p>
+      <p>Your continued use of KoreFlow after a change constitutes acceptance of the updated terms. If you do not agree to a change, please stop using the app and uninstall it.</p>
+    </section>
+
+    <section class="policy" id="termination">
+      <h2>11. Termination</h2>
+      <p>These terms remain in effect for as long as you use KoreFlow. You may terminate at any time by deleting the app from your device — this also permanently removes all locally stored estimates and reference photos.</p>
+      <p>KoreFlow Inc. may suspend or terminate your access to the app at any time, with or without notice, if we reasonably believe you have violated these terms. Upon termination, all licenses granted to you under these terms will immediately cease.</p>
+    </section>
+
+    <section class="policy" id="contact">
+      <h2>12. Contact</h2>
+      <p>If you have any questions about these Terms of Use, please reach out:</p>
+      <p>
+        <strong>KoreFlow Inc.</strong><br>
+        Email: <a href="mailto:Amirjadoon8811@gmail.com" style="color:var(--gold-deep);">Amirjadoon8811@gmail.com</a><br>
+        Website: <a href="https://koreflow.app" target="_blank" rel="noopener" style="color:var(--gold-deep);">koreflow.app</a>
+      </p>
+    </section>
+
+    <div class="contact-band">
+      <h3 class="serif">Questions about these terms?</h3>
+      <p>We are happy to clarify anything in plain language.</p>
+      <a href="mailto:Amirjadoon8811@gmail.com">Email KoreFlow Inc.</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="brand-mark">K</span>
+        <span class="brand-name">KoreFlow</span>
+      </div>
+      <p>A premium renovation and moving freight estimator. Crafted with care by KoreFlow Inc.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="support.html#contact">Contact</a></li>
+        <li><a href="support.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="privacy.html">Estimate Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 KoreFlow Inc. All rights reserved.</span>
+    <span>Crafted with care.</span>
+  </div>
+</footer>
+
+</body>
+</html>

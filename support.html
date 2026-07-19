@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — KoreFlow</title>
+<meta name="description" content="Get help with KoreFlow. Contact our support team, browse FAQs, and learn how to get the most out of your renovation and moving estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --champagne:      #F5EACF;
+    --champagne-deep: #E3CEA4;
+    --champagne-light:#FCF8ED;
+    --gold-accent:    #BC9C63;
+    --gold-deep:      #8F703C;
+    --gold-bright:    #E8CF8F;
+    --on-champagne:   #2E2618;
+    --on-champagne-soft:#615138;
+    --line:           #E3D8BE;
+    --shadow:         rgba(64, 55, 36, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--on-champagne);
+    background: linear-gradient(135deg, var(--champagne-light) 0%, var(--champagne) 55%, var(--champagne-deep) 100%);
+    min-height: 100vh;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', 'Times New Roman', serif; }
+
+  /* Nav */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(252, 248, 237, 0.78);
+    border-bottom: 1px solid rgba(143, 112, 60, 0.12);
+  }
+
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--on-champagne);
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-accent) 55%, var(--gold-deep));
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--on-champagne-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-links a.active { color: var(--gold-deep); font-weight: 600; }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-accent) 55%, var(--gold-deep));
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  /* Hero */
+  .hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 28px 28px;
+  }
+
+  .hero-card {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-accent) 55%, var(--gold-deep));
+    border-radius: 28px;
+    padding: 56px 48px;
+    color: #fff;
+    box-shadow: 0 20px 60px rgba(143, 112, 60, 0.35);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-card::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+  }
+
+  .hero-card .eyebrow {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+
+  .hero-card h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .hero-card .lede {
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.94;
+    max-width: 640px;
+    position: relative;
+  }
+
+  /* Body */
+  main { max-width: 900px; margin: 0 auto; padding: 0 28px 80px; }
+
+  /* Contact cards */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .contact-card {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 24px var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px var(--shadow);
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 14px rgba(143, 112, 60, 0.3);
+  }
+
+  .contact-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--on-champagne);
+    margin-bottom: 8px;
+  }
+
+  .contact-card p {
+    color: var(--on-champagne-soft);
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .contact-card a.cta {
+    display: inline-block;
+    color: var(--gold-deep);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .contact-card a.cta:hover { border-bottom-color: var(--gold-deep); }
+
+  /* Section header */
+  .section { margin-top: 56px; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .section-header .eyebrow {
+    color: var(--gold-deep);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+
+  .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.15;
+    color: var(--on-champagne);
+    margin-bottom: 10px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+    color: var(--on-champagne-soft);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* FAQ */
+  .faq-list {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 28px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: inherit;
+    color: var(--on-champagne);
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .faq-question:hover { background: rgba(245, 234, 207, 0.4); }
+
+  .faq-toggle {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--champagne);
+    color: var(--gold-deep);
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    transition: transform 0.25s, background 0.2s;
+  }
+
+  .faq-item.open .faq-toggle {
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+    color: #fff;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .faq-answer-inner {
+    padding: 0 28px 22px;
+    color: var(--on-champagne-soft);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-answer { max-height: 500px; }
+
+  /* Tips */
+  .tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  .tip {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    padding: 26px 22px;
+  }
+
+  .tip-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--champagne);
+    color: var(--gold-deep);
+    display: grid;
+    place-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--line);
+  }
+
+  .tip h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .tip p { color: var(--on-champagne-soft); font-size: 13px; line-height: 1.55; }
+
+  /* Status banner */
+  .status {
+    margin-top: 28px;
+    background: rgba(245, 234, 207, 0.6);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--on-champagne-soft);
+  }
+
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #5cb85c;
+    box-shadow: 0 0 0 4px rgba(92, 184, 92, 0.2);
+  }
+
+  /* Contact form */
+  .form-card {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 12px 36px var(--shadow);
+    margin-top: 32px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-field { display: flex; flex-direction: column; }
+
+  .form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--on-champagne-soft);
+    margin-bottom: 6px;
+  }
+
+  .form-field input,
+  .form-field textarea,
+  .form-field select {
+    background: rgba(252, 248, 237, 0.8);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--on-champagne);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus,
+  .form-field select:focus {
+    outline: none;
+    border-color: var(--gold-deep);
+    background: #fff;
+  }
+
+  .form-field textarea { resize: vertical; min-height: 120px; }
+
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .form-note { font-size: 12px; color: var(--on-champagne-soft); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(143, 112, 60, 0.3);
+  }
+
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(143, 112, 60, 0.4); }
+
+  /* Footer */
+  footer {
+    background: var(--on-champagne);
+    color: var(--champagne-light);
+    padding: 50px 28px 28px;
+  }
+
+  .footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .footer-brand .brand-name { color: var(--champagne-light); font-size: 22px; }
+
+  footer p { color: var(--champagne-deep); font-size: 14px; line-height: 1.6; }
+
+  footer h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: var(--champagne-light);
+  }
+
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 8px; }
+
+  footer a {
+    color: var(--champagne-deep);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--gold-bright); }
+
+  .footer-bottom {
+    max-width: 1120px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(227, 206, 164, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--champagne-deep);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .hero { padding: 40px 18px 20px; }
+    .hero-card { padding: 36px 24px; }
+    .hero-card h1 { font-size: 34px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .tips { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-card { padding: 26px 20px; }
+    .section-header h2 { font-size: 28px; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">K</span>
+      <span class="brand-name">KoreFlow</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="support.html" class="active">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html#cta" class="nav-cta">Get the App</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-card">
+    <span class="eyebrow">SUPPORT</span>
+    <h1 class="serif">We're here to help<br>with your project.</h1>
+    <p class="lede">Whether you have a question about an estimate, a feature request, or need a hand with a tricky move — our team reads every message.</p>
+  </div>
+</header>
+
+<main>
+
+  <div class="status">
+    <span class="status-dot"></span>
+    <span>All systems operational. Average response time: under 24 hours.</span>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-header">
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h2 class="serif">Reach the team directly</h2>
+      <p>Choose the channel that suits you best. We respond personally to every inquiry.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <h3>Email Support</h3>
+        <p>For product questions, bug reports, account issues, or general feedback. We read every message.</p>
+        <a href="mailto:Amirjadoon8811@gmail.com" class="cta">Amirjadoon8811@gmail.com →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">⌘</div>
+        <h3>Help Center</h3>
+        <p>Step-by-step articles covering estimates, photo attachments, add-ons, and saved quotes.</p>
+        <a href="#faq" class="cta">Browse FAQs →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">⌖</div>
+        <h3>Visit Our Website</h3>
+        <p>See the latest product news, release notes, and announcements from the KoreFlow team.</p>
+        <a href="https://koreflow.app" target="_blank" rel="noopener" class="cta">koreflow.app →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✦</div>
+        <h3>Feature Request</h3>
+        <p>Have an idea that would make KoreFlow better? Tell us. Many of our best features came from users.</p>
+        <a href="#message" class="cta">Send a suggestion →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-header">
+      <span class="eyebrow">FREQUENTLY ASKED</span>
+      <h2 class="serif">Quick answers</h2>
+      <p>Tap a question to expand. Still stuck? Drop us a line below.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Is KoreFlow a free app?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          KoreFlow is a free download with all estimator features unlocked. There are no in-app purchases, no subscriptions, and no ads. The app generates estimates based purely on the inputs you provide.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Where is my data stored?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Every estimate and reference photo is saved locally on your device. KoreFlow does not upload your data to our servers. Uninstalling the app will permanently remove all of your saved quotes — please export anything you need first.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How accurate are the estimates?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          KoreFlow's pricing model is built on transparent, observable inputs: property type, room count, floor access, distance, add-ons, and speed tier. Estimates are designed to be a planning aid — not a binding quote. For final pricing on a real engagement, always request an on-site assessment from a licensed service provider.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Why does KoreFlow ask for location access?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Location is used <em>only</em> on-screen to estimate the distance between your pickup and destination for moving and freight quotes. KoreFlow does not request background location, and the reading is a single on-demand sample. You can always type addresses manually instead.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I attach photos to my estimate?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Yes. Photos help refine the estimate by giving context on the items being moved or renovated. You can attach images from your photo library or capture a new photo with the camera. Photos stay on your device — they are never uploaded.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How do I clear all my saved quotes?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Open the Profile screen in KoreFlow and tap <em>Clear All Saved Quotes</em>. You'll see a confirmation prompt. Once cleared, the data is permanently removed from your device and cannot be recovered — so export anything important first.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Does KoreFlow sync across my devices?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          No. KoreFlow does not include an account system or cross-device sync. Your quotes live on the device where they were created. If you switch phones, the estimates do not automatically transfer.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How do I report a bug or request a feature?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Email us at <a href="mailto:Amirjadoon8811@gmail.com" style="color:var(--gold-deep);">Amirjadoon8811@gmail.com</a> with as much detail as you can: your iOS version, the device, what you were doing, and what you expected. Screenshots are always welcome.
+        </div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="eyebrow">GET THE MOST OUT OF KOREFLOW</span>
+      <h2 class="serif">Tips for sharper estimates</h2>
+      <p>Three small habits that materially improve the accuracy of your quotes.</p>
+    </div>
+
+    <div class="tips">
+      <div class="tip">
+        <div class="tip-icon">1</div>
+        <h4>Measure twice</h4>
+        <p>Double-check your room count and approximate area. The estimator scales labor with these inputs, so small errors compound.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">2</div>
+        <h4>Attach reference photos</h4>
+        <p>A picture of staircases, narrow doorways, or bulky items lets your future service provider prepare properly on day one.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">3</div>
+        <h4>Try multiple speed tiers</h4>
+        <p>Same-Day and Priority tiers are useful comparisons even if you plan to book Standard — they reveal how time-sensitive the work is.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE FORM -->
+  <section class="section" id="message">
+    <div class="section-header">
+      <span class="eyebrow">SEND A MESSAGE</span>
+      <h2 class="serif">Drop us a line</h2>
+      <p>We aim to respond within one business day. No bots — just the team.</p>
+    </div>
+
+    <form class="form-card" action="mailto:Amirjadoon8811@gmail.com" method="post" enctype="text/plain">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Alex Morgan" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>General question</option>
+            <option>Bug report</option>
+            <option>Feature request</option>
+            <option>Estimate help</option>
+            <option>Press &amp; partnerships</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="device">Device (optional)</label>
+          <input id="device" name="device" type="text" placeholder="iPhone 15 Pro · iOS 18">
+        </div>
+      </div>
+
+      <div class="form-field" style="margin-bottom: 18px;">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <span class="form-note">By submitting you agree to our <a href="privacy.html" style="color:var(--gold-deep);">Privacy Policy</a>.</span>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="brand-mark">K</span>
+        <span class="brand-name">KoreFlow</span>
+      </div>
+      <p>A premium renovation and moving freight estimator. Crafted with care by KoreFlow Inc.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="support.html#contact">Contact</a></li>
+        <li><a href="support.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="privacy.html">Estimate Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 KoreFlow Inc. All rights reserved.</span>
+    <span>Crafted with care.</span>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+      btn.setAttribute('aria-expanded', String(!wasOpen));
+    });
+  });
+</script>
+
+</body>
+</html>
